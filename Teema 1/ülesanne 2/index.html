@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS example message + alert, prompt, confirm</title>
+    </head>
+    <body>
+        <h1>Js example - вывод данных</h1>
+    </body>
+    <script>
+        // document.write('<p>Hey, bro <br> - вывод</p>')
+        
+        // alert('Hey, JS')
+        var answer = 0;
+        answer = prompt('What are u favourite number?');
+        if(answer == null || answer == ''){
+            document.write('<p> there\'s not number</p>')
+        }else {
+            document.write('<p> your answer is - ' + answer + '</p>')
+        }
+
+        var answerUser=confirm('Вы готовы перейти по ссылке?\n Если ОК - ДА или CANCEL + Нет')
+        if(answerUser){
+            document.write('<hr>Ссылка: <a href="https://kutsehariduskeskus.ee/et">IVKHK eesti keeles</a>')
+        }else{
+            document.write('<p>Окей, не будет тебе ссылки!</p>')
+        }
+    </script>
+</html>

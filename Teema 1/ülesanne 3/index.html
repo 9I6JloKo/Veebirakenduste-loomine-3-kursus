@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS example message + alert, prompt, confirm</title>
+    </head>
+    <body>
+        <h1>Js example - вывод данных</h1>
+    </body>
+    <script>
+        document.write('ЦИКЛ ФОР');
+        var count = prompt('Сумма чисел от 1 до....\n Введите число', 5);
+        var summa = 0;
+        for(var i = 1; i<=count; i++){
+            summa=summa+i;
+            document.write('<br>' + (i) + '. Промежуточная сумма -' + summa);
+        }
+        document.write('<br>FOR - Итого сумма чисел 1 - ' + count + ' равна ' + summa);
+        document.write('<h3>Цикл WHILE</h3>');
+        var counter = 1;
+        summa = 0;
+        while(counter<=count) {
+            summa += counter;
+            document.write('<br>' + (counter) + '. Промежуточная сумма -' + summa);
+            counter++;
+        }
+        document.write('<br>WHILE - сумма чисел 1 - ' + count + ' равна ' + summa)
+    </script>
+</html>

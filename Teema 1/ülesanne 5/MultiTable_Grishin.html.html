@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+    var answer;
+    var massiveArray = [];
+    let result;
+    let resultCount = 0;
+    let a;
+    let b;
+    document.write('Task1 Multiply table');
+    for(var i = 1; i < 6; i++){
+        a = Math.floor(Math.random() * 10);
+        b = Math.floor(Math.random() * 10);
+        answer = prompt(i + ' Пример. ' + a + ' * ' + b + ' = ?');
+        if (answer === null) {
+            break; 
+        }
+        massiveArray.push(a*b);
+        if(answer !== '' && answer !== undefined){
+            if(parseInt(answer) === a*b){
+                result = true;
+                document.write('<p><br>' + i + '. Result - <b>' + result + '</b>.  ' + a + ' * ' + b + ' = ' + answer + '</p>');
+            }else{
+                result = false;
+                document.write('<p><br>' + i + '. Result - <b>' + result + '</b>.  ' + a + ' * ' + b + ' = ' + answer + '. Expected ' + massiveArray[i-1] + '</p>');
+            }
+        }else{
+            result = false;
+            document.write('<p><br>' + i + '. Result - <b>' + result + '</b>.  ' + a + ' * ' + b + ' = ' + '<b>"nothing"</b>' + '. Expected ' + massiveArray[i-1] + '</p>');
+        }
+        if(result == true){
+            resultCount += 1;
+        }
+    }
+    document.write('<p>Кол-во правильных ответов - ' + resultCount + ', кол-во неправильных ответов - ' + (5 - resultCount) + '</p>');
+    document.write('<footer style="position:absolute; bottom:0;left:50%;transform: translateX(-50%)"><p><b>JPTV20, 2022, GRISHIN</b></p></footer>');
+</script>
+</html>
