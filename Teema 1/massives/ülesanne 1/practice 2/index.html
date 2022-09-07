@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Государства</h1>
+    <hr>
+    <div id="content"></div>
+</body>
+<script>
+    var countries = [
+        {
+            state:'Estonia',
+            capital: 'Tallinn',
+            language: 'Estonian'
+        },
+        {
+            state:'Russia',
+            capital: 'Moscow',
+            language: 'Russian'
+        },
+        {
+            state:'Norway',
+            capital: 'Oslo',
+            language: 'Norwegian'
+        },
+        {
+            state:'Germany',
+            capital: 'Berlin',
+            language: 'Deutsch'
+        }
+    ]
+    function printOneCountry(oneCountry) {
+        var container = document.createElement('p');
+        var text = oneCountry.state + '  -  ' + oneCountry.capital;
+        text += '(official language: ' + oneCountry.language + ')';
+        container.innerHTML=text;
+        document.getElementById('content').appendChild(container);
+    }
+    for(var i = 0; i < countries.length; i++) {
+        printOneCountry(countries[i]);
+    }
+</script>
+</html>

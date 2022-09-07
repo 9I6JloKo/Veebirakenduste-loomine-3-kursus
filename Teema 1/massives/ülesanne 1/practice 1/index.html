@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Examples Array</h1>
+    <hr>
+    <div id="content"><h2 id="mH1"></h2></div>
+    <hr>
+    <div id="intro"><h2 id="mH2"></h2><ul id="list"></ul></div>
+</body>
+<script>
+    var country = ['Eesti', 'Russia', 'Norway', 'Germany', 'France'];
+    var cities = ['Tallinn', 'Jõhvi', 'Moscow', 'Saint-Petersburg', 'Oslo', 'Berlin', 'Paris'];
+    var myHeading1 = 'Array - list countries';
+    document.getElementById('mH1').innerHTML = myHeading1;
+    printCountry(country);
+    var myHeading2 = 'Array - list cities';
+    document.getElementById('mH2').innerHTML = myHeading2;
+    printCity(cities);
+    function printCountry(country) {
+        for(var i = 0; i < country.length; i++) {
+            var string = document.createElement('span');
+            string.innerHTML=country[i] + '<br>';
+            document.getElementById('content').appendChild(string);
+        }
+    }
+    function printCity(city) {
+        for(var i = 0; i < city.length; i++) {
+            var string = document.createElement('li');
+            string.innerHTML=city[i] + '<br>';
+            document.getElementById('list').appendChild(string);
+        }
+    }
+</script>
+</html>

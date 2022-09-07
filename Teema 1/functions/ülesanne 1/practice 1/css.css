@@ -1,0 +1,11 @@
+.class1 {
+    width: 300px;
+    height: 200px;
+    margin-bottom: 20px;
+    background-color: aqua;
+    transition-duration: 0.15s;
+}
+.class2 {
+    width: 300px;
+    height: 200px;
+}
