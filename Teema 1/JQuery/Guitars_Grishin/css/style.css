@@ -1,0 +1,86 @@
+html {
+    background-image:url(../images/guitars.jpg);
+    background-size: 110% auto;
+    background-repeat: repeat-y;
+}
+body {
+    font-family: tahoma;
+    margin: 0 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#headerFull {
+    background-color: black;
+    color: white;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid grey;
+}
+main {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 100px;
+    padding: 10px;
+    background-color: aliceblue;
+    border: 2px solid black;
+    border-radius: 5px 15px / 16px 35px;
+    box-shadow: 3px 3px 10px grey;
+}
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    height: 100%;
+    opacity: 50%;
+    margin-left: 20px;
+}
+h2{
+    opacity: 80%;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 15px 5px / 35px 16px;
+    box-shadow: 3px 3px 10px grey;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(135,135,255,0.42947601403842783) 35%, rgba(0,212,255,1) 100%);
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+ul{
+    width: 600px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+ul li a:hover {
+    color: aqua;
+    transition-duration: 0.5s;
+}
+#text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    text-align: justify;
+}
+footer {
+    margin-top: 200px;
+    background-color: black;
+    color: grey;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+img {
+    border-radius: 15px 5px / 35px 16px;
+    box-shadow: 3px 3px 10px grey;
+}
